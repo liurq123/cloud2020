@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
@@ -39,8 +40,15 @@ public class PaymentController {
         return new CommonResult(444, "没有对应id的记录", null);
     }
 
-    @GetMapping(value = "/payment/serviceport")
-    public String getport(){
+    @RequestMapping(value = "/payment/timeout",method = RequestMethod.GET)
+    public String delayBack()
+    {
+        // 设置睡眠时间
+        try{
+            TimeUnit.SECONDS.sleep(3);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return serverport;
     }
 }

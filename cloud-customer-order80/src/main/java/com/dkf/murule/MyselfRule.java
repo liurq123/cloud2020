@@ -6,6 +6,9 @@ import com.netflix.loadbalancer.RetryRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * @author LiuRongQuan
+ */
 @Configuration
 public class MyselfRule {
 
