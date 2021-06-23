@@ -64,6 +64,7 @@ public class PaymentController {
 
     @GetMapping(value = "/payment/serviceport")
     public String getport(){
+        log.info("调用端口："+serverport);
         return serverport;
     }
 
