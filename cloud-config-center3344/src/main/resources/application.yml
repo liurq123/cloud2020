@@ -7,12 +7,13 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:liurq123/springcloud-config.git
+          uri: https://github.com/liurq123/springcloud-config.git
           search-paths:
             - springcloud-config
-        label: master
+        label: main     #  git上的分支
 
 eureka:
   client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/
+
