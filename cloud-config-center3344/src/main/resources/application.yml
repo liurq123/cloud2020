@@ -11,7 +11,18 @@ spring:
           search-paths:
             - springcloud-config
         label: main     #  git上的分支
-
+# 消息总线端rabbitmq配置
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest
+# 暴露bus-refresh刷新配置端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "bus-refresh"
 eureka:
   client:
     service-url:
